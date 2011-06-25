@@ -8,6 +8,12 @@ public class PuzzleTest {
 
 	private NumberWriter writer = new BigNumberWriter() ;
 	
+	@Test(expected=NegativeNumberException.class)
+	public void rejectNegativeNumbers() {
+		NumberWriter writer = new SingleDigitWriter() ;
+		writer.writeOut(-1) ;
+	}
+	
 	@Test
 	public void writeZero() {
 		assertEquals("zero", writer.writeOut(0)) ;

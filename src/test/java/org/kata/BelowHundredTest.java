@@ -6,12 +6,6 @@ import org.junit.Test;
 
 public class BelowHundredTest {
 
-	@Test(expected=NegativeNumberException.class)
-	public void rejectNegativeNumbers() {
-		NumberWriter writer = new SingleDigitWriter() ;
-		writer.writeOut(-1) ;
-	}
-	
 	@Test
 	public void writeTwentyOne() {
 		NumberWriter writer = new BigNumberWriter() ;
